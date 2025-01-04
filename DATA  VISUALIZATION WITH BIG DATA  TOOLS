@@ -1,0 +1,16 @@
+Python Script for Data Preparation
+
+import pandas as pd
+
+# Load the dataset
+df = pd.read_csv('path/to/dataset.csv')
+
+# Data cleaning and preprocessing
+df.dropna(inplace=True)  # Drop rows with missing values
+df.drop_duplicates(inplace=True)  # Remove duplicate rows
+
+# Save the cleaned dataset
+df.to_csv('path/to/cleaned_dataset.csv', index=False)
+
+print("Data preparation completed. Cleaned dataset saved.")
+
